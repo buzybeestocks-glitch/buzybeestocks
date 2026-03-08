@@ -4,9 +4,9 @@ import pandas as pd
 import datetime
 from bs4 import BeautifulSoup
 DISCLAIMER_TEXT = """
------------------------------------------------------------------------------------
+-------------------------------------------------------------------------
 DISCLAIMER   (Please Scroll Down and Read it Completely)
------------------------------------------------------------------------------------
+-------------------------------------------------------------------------
 The information, data, charts, indicators, and analytics provided by this stock monitoring system are strictly for educational, informational, and research purposes only. They do not constitute investment advice, trading advice, or recommendations to buy, sell, or hold any securities.
 
 This system only displays publicly available market data and calculated indicators derived from such data sources. The analysis, indicators, and signals generated are automated outputs and should not be considered as financial or investment advice.
@@ -129,9 +129,9 @@ class BuzyBee:
             except:
                 global_data += f"{name}: Data NA\n"
         global_monitor = f"""
------------------------------------------------------------------------------------ 
+-------------------------------------------------------------------------
 🚦🚦🚦🚦🌎Global Market Monitor🌎🚦🚦🚦🚦
------------------------------------------------------------------------------------ 
+-------------------------------------------------------------------------
 {global_data}
 """
         indian_symbols = {
@@ -150,22 +150,22 @@ class BuzyBee:
             except:
                 indian_data += f"{name}: Data NA\n"
         indian_monitor = f"""
------------------------------------------------------------------------------------
+-------------------------------------------------------------------------
 🚦🚦🚦🚦🦁Indian Market Monitor🦁🚦🚦🚦🚦
------------------------------------------------------------------------------------
+-------------------------------------------------------------------------
 {indian_data}
 """
         now = datetime.datetime.now()
         output_text = f"""
 {DISCLAIMER_TEXT}
------------------------------------------------------------------------------------
+-------------------------------------------------------------------------
 {SIGNATURE_TEXT}
------------------------------------------------------------------------------------
+-------------------------------------------------------------------------
 💎Symbol: {symbol}
 📆Time: {now}
------------------------------------------------------------------------------------
+-------------------------------------------------------------------------
 🚦🚦🚦🚦💎About The Stock💎🚦🚦🚦🚦
------------------------------------------------------------------------------------
+-------------------------------------------------------------------------
 ✅Company Name: {info.get("longName")}
 ✅Sector: {info.get("sector")}
 ✅Industry: {info.get("industry")}
@@ -176,9 +176,9 @@ class BuzyBee:
 
 
 
------------------------------------------------------------------------------------ 
+-------------------------------------------------------------------------
 🚦🚦🚦🚦🏆Fundamental Monitor🏆🚦🚦🚦🚦
------------------------------------------------------------------------------------ 
+-------------------------------------------------------------------------
 🟢Market Cap: {info.get("marketCap")}
 🟢Total Revenue: {info.get("totalRevenue")}
 🟢Gross Profit: {info.get("grossProfits")}
@@ -199,9 +199,9 @@ class BuzyBee:
 
 
 
------------------------------------------------------------------------------------ 
+------------------------------------------------------------------------- 
 🚦🚦🚦🚦⚙️Technical Monitor⚙️🚦🚦🚦🚦
------------------------------------------------------------------------------------
+-------------------------------------------------------------------------
 🧮LTP: {round(ltp,2)}
 🔒Prev Close: {round(prev_close,2)}
 🔓Open: {openp}
@@ -223,9 +223,9 @@ class BuzyBee:
 
 
 
------------------------------------------------------------------------------------ 
+------------------------------------------------------------------------- 
 🚦🚦🚦🚦🎯Trend Monitor🎯🚦🚦🚦🚦
------------------------------------------------------------------------------------
+-------------------------------------------------------------------------
 ⏰Short Term Trend: {short}
 ⏰Medium Term Trend: {medium}
 ⏰Long Term Trend: {longterm}
@@ -234,11 +234,11 @@ class BuzyBee:
 {indian_monitor}
 {global_monitor}
 
------------------------------------------------------------------------------------
+-------------------------------------------------------------------------
 💾Data Source: NSE / Yahoo / Other Screeners etc
------------------------------------------------------------------------------------
+-------------------------------------------------------------------------
 🚦🚦🚦🚦☠️Warning☠️🚦🚦🚦🚦
------------------------------------------------------------------------------------
+-------------------------------------------------------------------------
 This Stock Monitoring System is strictly for Educational, Informational and Fun purposes only.
 This system only displays publicly available Market Data and Calculated Indicators derived from sources.
 The Developer of this App is not Registered with SEBI as an Investment Adviser or Research Analyst.
